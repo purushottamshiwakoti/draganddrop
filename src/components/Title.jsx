@@ -8,22 +8,22 @@ const Title = () => {
   const [columns, setColumns] = useState([
     {
       name: "Column A",
-      items: ["A1", "A2", "A3"],
+      childs: ["A1", "A2", "A3"],
       color: "",
     },
     {
       name: "Column B",
-      items: ["B1", "B2", "B3"],
+      childs: ["B1", "B2", "B3"],
       color: "yellow",
     },
     {
       name: "Column C",
-      items: ["C1", "C2", "C3"],
+      childs: ["C1", "C2", "C3"],
       color: "blue",
     },
     {
       name: "Column D",
-      items: ["D1", "D2", "D3"],
+      childs: ["D1", "D2", "D3"],
       color: "red",
     },
   ]);
@@ -33,7 +33,7 @@ const Title = () => {
       ...columns,
       {
         name: `Column ${String.fromCharCode(65 + columns.length)}`,
-        items: [],
+        childs: [],
         color: "",
       },
     ]);
@@ -65,8 +65,8 @@ const Title = () => {
     } else {
       const itemIndex = parseInt(event.dataTransfer.getData("itemIndex"));
       const newColumns = [...columns];
-      const [item] = newColumns[fromColumnIndex].items.splice(itemIndex, 1);
-      newColumns[toColumnIndex].items.push(item);
+      const [item] = newColumns[fromColumnIndex].childs.splice(itemIndex, 1);
+      newColumns[toColumnIndex].childs.push(item);
       setColumns(newColumns);
     }
   };
@@ -100,7 +100,7 @@ const Title = () => {
                 </span>
               </div>
               <div className={`column-body `}>
-                {column.items.map((item, indexItem) => (
+                {column.childs.map((item, indexItem) => (
                   <div
                     className={`item ${column.color}`}
                     key={indexItem}
