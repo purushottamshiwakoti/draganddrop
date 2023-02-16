@@ -1,0 +1,126 @@
+
+
+.column-container {
+    display: flex;
+    /* background-color: #040404;   */
+  }
+
+.column {
+    display: inline-block;
+    width: 20%;
+    height: auto;
+    margin: 20px 0 0 20px;
+    background-color: #efeded;
+    box-shadow:0 0 2px  rgba(77, 77, 77, 0.4);
+    flex: 0 0 auto;
+
+}
+
+.container{
+  overflow-x: scroll;
+  height: 90vh;
+}
+
+
+  
+  
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffff;
+    box-shadow:0 0 3px  rgba(0, 0, 0, 0.4);
+    margin: 10px 2px 2px 2px;
+    height: 30px;
+    padding-left: 20px;
+    font-weight:500;
+    font-size:large;
+  }
+  
+ 
+  
+  .column-body {
+    padding: 10px;
+
+  }
+  
+  .item {
+    background-color: rgb(255, 255, 255);
+    height: 25px;
+    padding: 10px;
+    margin: 10px 8px 10px 15px;
+    cursor: grab;
+    box-shadow:0 1px 3px  rgba(0, 0, 0, 0.4), -4px 0 0 #83adec;
+
+
+  }
+  .yellow{
+    box-shadow: -4px 0 0 #faf44a ;
+  }
+  .blue{
+    box-shadow: -4px 0 0 #45D5F7 ;
+
+  }
+
+  .red{
+
+    box-shadow: -4px 0 0 #EB4D72 ;
+  }
+  
+  
+  .add-item {
+    background-color: lightgray;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 20%;
+    height: auto;
+    margin: 20px 0 0 20px;
+    background-color: #ffffff;
+    box-shadow:0 0 2px  rgba(56, 56, 56, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color:grey;
+  }
+  .dragging{
+    opacity: 0.9;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .column {
+      flex-basis: calc(33.33% - 20px);
+      max-width: calc(33.33% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .column {
+      flex-basis: calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+  }
+  @media (max-width: 480px) {
+    .flex {
+      flex-direction: column;
+      height: auto;
+    }
+  
+
+    button {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .column {
+      flex-basis: calc(100% - 20px);
+      max-width: calc(100% - 20px);
+    }
+  }
